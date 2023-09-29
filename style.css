@@ -1,0 +1,254 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: rgb(255, 73, 103);
+}
+.fa {
+    margin: 5px;
+    font-size: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+}
+header .logo {
+    padding-left: 100px;
+    font-weight: 100;
+    font-size: 23px;
+   font-family: Shrikhand;
+}
+header .logo span {
+    position: relative;
+    left: -4px;
+    font-size: 45px;
+    font-weight: 700;
+    color: rgb(255, 73, 103);
+    font-family: Shrikhand;
+}
+header .nav {
+    margin: 10px;
+    font-size: 17px;
+}
+header .icons {
+    padding-right: 100px;
+}
+
+section {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.home {
+    background: url(./Images/bouquet-tulipes-cadeau.jpg);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home .content { 
+    max-width: 420px;
+    text-align: justify;
+}
+.home .content h1 {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+.home .content h3 {
+    font-size: 23px;
+    font-weight: 700;
+    color: rgb(255, 43, 78);
+}
+.home .content p {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.home .content button, .Product_Gallery button, .order_now button {
+    background-color: rgb(12, 12, 12);
+    color: white;
+    padding: 8px 25px;
+    border-radius: 20px;
+    font-family: Raleway;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+}
+.home .content button:hover{
+background-color: rgb(255, 73, 103);
+cursor: pointer;
+}
+.Product_Gallery{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    height: 400px;
+}
+.Product_Gallery h2 {
+    font-size: 30px;
+    text-align: center;
+}
+.Product_Gallery .gallery_pic {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Product_Gallery .gallery_pic .picture {
+    width: 190px;
+    height: 210px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 15px;
+    font-family: Dancing Script;
+    text-align: center;
+    padding-bottom: 3px;
+    position: relative;
+}
+.Product_Gallery .gallery_pic .picture :hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px pink;
+}
+.picture img {
+    object-fit:scale-down;
+    height: 85%;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.picture span {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: italic;
+    display: block;
+}
+
+
+.Product_Gallery button {
+    margin-top: 20px;
+   position: absolute;
+   right: 100px;
+   background-color: rgb(255, 73, 103);
+   cursor: pointer;
+}
+.Product_Gallery button:hover {
+    transform: scale(1.2);
+}
+.testimony {
+    height: 400px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(230, 230, 230);
+    padding: 5px 120px;
+}
+.testimony .happy_customer {
+    width: 280px;
+    height: 320px;
+    padding: 5px 30px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 20px rgb(252, 182, 237);
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    transform: scale(0.9);
+}
+.happy_customer img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background-color: pink;
+    object-fit: cover;
+}
+.happy_customer div {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 18px;
+}
+.happy_customer span {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    font-family: Dancing Script;
+    font-weight:700;
+    font-size: 25px;
+    text-decoration: underline;
+}
+.happy_customer .fa {
+    color: pink;
+}
+.happy_customer .fa-star{
+    color: rgb(255, 73, 103);
+    margin: 0px;
+    font-size: 13px;
+}
+.happy_customer .starred {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.order_now {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 150px;
+}
+.order_now .call {
+    background-color: pink ;
+    width: 75vw;
+    height: 100px;
+    padding: 0 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+footer {
+    height: 70px;
+    color: rgb(255, 43, 78);
+    text-align: center;
+    background-color: rgb(15, 15, 15);
+    font-size: 12px;
+}
+footer .fa-brands {
+    font-size: 20px;
+    margin: 15px 5px;
+}
+footer a {
+    text-decoration: none;
+    color: rgb(255, 43, 78);
+}
