@@ -1,4 +1,8 @@
-
+/*** Desktop First ***/
+body {
+    max-width: 1366px;
+    width: 100%;
+}
 * {
     margin: 0px;
     padding: 0px;
@@ -25,6 +29,17 @@ header {
     top: 0px;
     right: 0px;
     left: 0px;
+}
+header #bar {
+    display: none;
+}
+header .fa-bars {
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 3px 5px;
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    cursor: pointer;
+    display: none;
 }
 header .logo {
     padding-left: 100px;
@@ -58,7 +73,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -97,57 +112,88 @@ cursor: pointer;
 }
 .Product_Gallery{
     margin-top: 30px;
-    margin-bottom: 20px;
+    
     position: relative;
-    height: 400px;
 }
 .Product_Gallery h2 {
     font-size: 30px;
     text-align: center;
 }
 .Product_Gallery .gallery_pic {
+    padding: 0px 30px 20px 30px;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     display: flex;
     direction: column;
     justify-content: space-between;
+    gap: 25px;
     align-items: center;
     flex-wrap: wrap;
+    background-color: white;
 }
 .Product_Gallery .gallery_pic .picture {
-    width: 190px;
-    height: 210px;
+    width: 30%;
+    height: 250px;
+    padding-bottom: 3px;
+    position: relative;
+    margin-bottom: 30px;
+}
+.Product_Gallery .gallery_pic .picture h3{
     font-size: 30px;
     font-weight: 700;
     line-height: 15px;
     font-family: Dancing Script;
     text-align: center;
-    padding-bottom: 3px;
-    position: relative;
 }
-.Product_Gallery .gallery_pic .picture :hover {
-    transform: scale(1.1);
+.Product_Gallery .gallery_pic .picture:hover {
     box-shadow: 2px 2px 10px pink;
+    border-radius: 20px;
 }
 .picture img {
     object-fit:scale-down;
-    height: 85%;
+    height: 80%;
     width: 100%;
     margin-bottom: 5px;
+    border-radius: 20px 20px 0px 0px;
 }
-.picture span {
+.picture p {
     margin-top: 10px;
     font-size: 13px;
     font-weight: 400;
     font-style: italic;
-    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
-
-
+.Product_Gallery .gallery_pic .picture:hover .card_banner{
+    opacity: 1;
+}
+.Product_Gallery .gallery_pic .picture .card_banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: rgba(247, 66, 96, 0.753);
+    opacity: 0;
+    position: absolute;
+    bottom: 70px;
+}
+.Product_Gallery .gallery_pic .picture .card_banner .fas {
+    width: 25%;
+    text-align: center;
+    font-size: 23px;
+    color: white;
+    padding: 7px 0px;
+    
+}
+.Product_Gallery .gallery_pic .picture .card_banner .fas:hover {
+    color: rgb(247, 66, 96);
+    background-color: rgb(26, 26, 26);
+}
 .Product_Gallery button {
-    margin-top: 20px;
    position: absolute;
-   right: 100px;
+   right: 100px; bottom: 0px;
    background-color: rgb(255, 73, 103);
    cursor: pointer;
 }
@@ -155,19 +201,20 @@ cursor: pointer;
     transform: scale(1.2);
 }
 .testimony {
-    height: 400px;
+    height: auto;
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
     direction: column;
-    justify-content: space-between;
+    gap: 15px;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: rgb(230, 230, 230);
-    padding: 5px 120px;
+    padding: 5px 80px;
 }
 .testimony .happy_customer {
-    width: 280px;
+    width: 25%;
     height: 320px;
     padding: 5px 30px;
     border-radius: 5px;
@@ -224,7 +271,7 @@ cursor: pointer;
         justify-content: center;
         align-items: center;
         position: relative;
-        height: 150px;
+        height: auto;
 }
 .order_now .call {
     background-color: pink ;
@@ -251,4 +298,110 @@ footer .fa-brands {
 footer a {
     text-decoration: none;
     color: rgb(255, 43, 78);
+}
+
+/*** Media Queries Medium Devices ***/
+@media screen and (max-width : 1024px) {
+    
+}
+
+/*** Media Queries Small Devices ***/
+@media screen and (max-width : 540.98px) {
+    section {
+        padding: 0px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px;
+    }
+    header .fa {
+        font-size: 17px;
+        margin: 3px;
+    }
+    header .logo {
+        padding-left: 10px;
+        font-size: 30px;
+    }
+    header .fa-bars {
+        display: block;
+        margin-left:20px ;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background-color: rgb(240, 239, 239);
+        border-top: 1px solid rgba(0, 0, 0, 0.103);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header #bar:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a {
+        margin: 5px;
+        padding: 10px;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.103);
+        display: block;
+    }
+    header .icons {
+        margin-right: 0px;
+        position: relative;
+        right: -40px;
+    }
+    
+    .home .content { 
+        margin: 0 25px;
+        
+    }
+    .home .content h1 {
+        width: 30%;
+        text-align: left;
+    }
+    .Product_Gallery .gallery_pic {
+        padding: 0px 0px 10px 0px;
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .Product_Gallery .gallery_pic .picture {
+        width: 100%;
+        height: 250px;
+        transform: scale(1.2);
+        margin-bottom: 40px;
+
+    }
+    .Product_Gallery button {
+        
+        position: absolute;
+        right: 10px; bottom: -10px;
+        
+    }
+    .testimony {
+        height: auto;
+        display: flex;
+        padding: 3px 0px 0px 0px;
+        margin-bottom: 13px;
+        
+    }
+    .testimony .happy_customer {
+        width: 90%;
+        height: 250px;
+        margin-right: 5px;
+    }
+    .order_now {
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    .order_now .call {
+        display: block;
+        height: auto;
+        padding: 15px;
+        text-align: center;
+        
+    }
+    .order_now button {
+        margin-top: 10px;
+       
+    }
+
 }
